@@ -2,10 +2,10 @@ export const site={title:'개발자 포트폴리오',url:'https://hanmingyu02.gi
 export const menu=[['experience','현장실습'],['projects','프로젝트'],['education','교육사항'],['certifications','자격증'],['awards','수상내역']];
 const root='https://wonderfulrosemari.github.io/img/projects/';
 export const projects=[
-{slug:'luno',title:'LUNO',category:'모바일 보안 · AI',summary:'통화 음성의 언어·비언어 신호와 문자 URL을 결합해 보이스피싱 위험을 판별하는 모바일 보안 서비스',period:'2025.10–2026.01',role:'3인 팀 · 팀장',tags:['Spring Boot','FastAPI','Kotlin','MySQL','Snapshot Cache','k6'],logo:'logo.png',cover:'home-screen.png',metrics:[['약 86% → 92%','금융감독원 사례 약 140건 내부 라벨 일치율 · 실서비스 정확도 아님'],['480,007건 / 실패 0','로컬 1,000 RPS 목표 · H2 + 대체 로컬 AI + health 포함']],
+{slug:'luno',title:'LUNO',category:'모바일 보안 · AI',summary:'통화 음성의 언어·비언어 신호와 문자 URL을 결합해 보이스피싱 위험을 판별하는 모바일 보안 서비스',period:'2025.10–2026.01',role:'3인 팀 · 팀원',tags:['Spring Boot','FastAPI','Kotlin','MySQL','Snapshot Cache','k6'],logo:'logo.png',cover:'home-screen.png',metrics:[['약 86% → 92%','금융감독원 사례 약 140건 내부 라벨 일치율 · 실서비스 정확도 아님'],['480,007건 / 실패 0','로컬 1,000 RPS 목표 · H2 + 대체 로컬 AI + health 포함']],
 sections:[
 ['Overview','프로젝트 소개',['통화 녹음을 CLOVA STT로 전사하고 여러 텍스트 모델과 규칙 점수를 결합해 위험도를 안내하는 Android 서비스입니다. 대회 당시에는 텍스트 중심으로 분석했고, 이후 발화 속도와 무음 구간을 추가했습니다. 공공 스팸번호·피싱 URL을 초기 데이터로 활용하고 위험 판정 후 대응 절차를 안내합니다.']],
-['Role','담당 역할',['팀 개발: 팀장으로 기획, 구조 설계, 기능 통합, 배포를 진행하고 Android·Spring Boot·Python AI 서버의 요청·결과 흐름을 연결했습니다.','개인 후속 작업: 발화 특성 추가, URL Snapshot Cache, 지표·로그 수집 및 k6 로컬 부하테스트 기반 개선을 직접 진행했습니다.']],
+['Role','담당 역할',['팀 개발: 팀원으로 기획, 구조 설계, 기능 통합, 배포를 진행하고 Android·Spring Boot·Python AI 서버의 요청·결과 흐름을 연결했습니다.','개인 후속 작업: 발화 특성 추가, URL Snapshot Cache, 지표·로그 수집 및 k6 로컬 부하테스트 기반 개선을 직접 진행했습니다.']],
 ['Problem & Solution','문제와 해결',[
 '텍스트 분석의 한계 → CLOVA STT 전사 후 SBERT 의미 유사도, 한국어 BERT 문맥, Naive Bayes 통계 분류와 규칙 점수를 결합했습니다. 개인 후속 작업에서 발화 속도·무음 구간을 추가했습니다. 약 140건 내부 사례 비교에서 정답 일치율 약 86% → 92%이며 외부 독립 평가나 운영 정확도가 아닙니다.',
 '초기 신고 데이터 부족 → KISA·과학기술정보통신부 관련 공공데이터의 스팸번호를 DB에 사전 적재하고 공개 피싱·스미싱 URL 목록을 초기 조회 기준으로 활용했습니다.',
@@ -21,10 +21,10 @@ sections:[
 ['Next Steps','다음 개선 방향',['공공 목록과 사용자 제보를 중복 제거·관리자 검증을 거쳐 결합하는 방안을 계획하고 있습니다.','판정 근거·불확실성 시각화 및 공공 목록 업데이트 체계를 고도화할 예정입니다.']],
 ['Links','관련 자료',['화면·구조도·상장은 아래 원본 이미지로 확인할 수 있습니다. 별도 소스 코드·스토어·시연 영상 URL은 제공되지 않았습니다.']]],
 media:[['home-screen.png','앱 홈 화면'],['voice-result.png','실제 앱 통화 분석 결과'],['sms-analysis.png','문자 URL 분석 화면'],['phone-input.png','전화번호 입력 화면'],['post-incident-guide.png','피해 의심 시 사후 대응 안내'],['voice-analysis-architecture.png','음성 분석 시스템 처리 흐름'],['monitoring/before-timeout.jpg','실행 환경 변경 전 타임아웃 관측 화면'],['monitoring/after-timeout.jpg','실행 환경 변경 후 모니터링 화면']]},
-{slug:'catch-me',title:'Catch Me',category:'하이브리드 앱 · AI',summary:'AI 기반 실종·목격 제보와 보호자·입양자를 연결하는 유기동물 통합 플랫폼',period:'1개월 · 본격 구현 약 2주',role:'5인 팀 · 팀장',tags:['Spring Boot','React','MariaDB','FastAPI','CLIP','Morpheus'],logo:'logo.png',cover:'map-report.png',metrics:[['86.33% → 95.00%','동일 검증 이미지 300장 · 259 → 285장 정답 · +8.67%p'],['약 3만 장','CLIP 추가 학습에 사용한 이미지 수']],
+{slug:'catch-me',title:'Catch Me',category:'하이브리드 앱 · AI',summary:'AI 기반 실종·목격 제보와 보호자·입양자를 연결하는 유기동물 통합 플랫폼',period:'1개월 · 본격 구현 약 2주',role:'5인 팀 · 팀원',tags:['Spring Boot','React','MariaDB','FastAPI','CLIP','Morpheus'],logo:'logo.png',cover:'map-report.png',metrics:[['86.33% → 95.00%','동일 검증 이미지 300장 · 259 → 285장 정답 · +8.67%p'],['약 3만 장','CLIP 추가 학습에 사용한 이미지 수']],
 sections:[
 ['Overview','프로젝트 소개',['실종·목격 신고, 보호소 정보, 입양 게시글, 실시간 채팅을 통합한 하이브리드 앱입니다. 지도에서 주변 정보를 확인하고 AI 이미지 분석과 위치 정보를 결합해 유사 목격 제보를 탐색합니다.']],
-['Role','담당 역할',['팀장: 요구사항 정의서·설계 명세서·WBS로 짧은 일정의 범위와 우선순위를 구체화했습니다.','개인 담당: DB·공공 API, 지도 마커 최적화, CLIP 학습·검증 및 서비스 연동.','팀 전체 구현: 실종·목격·입양·보호소 화면 및 WebSocket 채팅 등 통합 앱 기능.']],
+['Role','담당 역할',['팀원: 요구사항 정의서·설계 명세서·WBS로 짧은 일정의 범위와 우선순위를 구체화했습니다.','개인 담당: DB·공공 API, 지도 마커 최적화, CLIP 학습·검증 및 서비스 연동.','팀 전체 구현: 실종·목격·입양·보호소 화면 및 WebSocket 채팅 등 통합 앱 기능.']],
 ['Problem & Solution','문제와 해결',['마커 누적 → 프로젝트에서 정한 7일 골든타임 기준으로 오래된 실종·목격 마커를 생성 대상에서 제외했습니다. 경과 시간별 표현과 밀집 마커 클러스터링을 적용해 숫자·색상으로 밀집도를 보여줍니다. 최근 정보 접근성과 가독성을 개선했으며 렌더링 속도는 정량 측정하지 않았습니다.','유사 동물 탐색 → Google Open Images Dog 클래스 기반 약 3만 장의 품종·색상 이미지로 openai/clip-vit-large-patch14-336 계열을 추가 학습했습니다. 동일 300장 검증 세트에서 259 → 285장 정답, 86.33% → 95.00%(+8.67%p)를 기록했습니다. FastAPI로 추론을 분리하고 위치 정보를 함께 활용합니다. 동일 개체 확정이 아닌 후보 추천입니다.','분산된 공공 정보 → 농림축산검역본부 동물보호센터 공공 API의 위치·주소와 국가동물보호정보시스템 공개 정보를 연결했습니다. 카카오 Local API로 주소를 좌표로 변환하고 동기화·조회 흐름을 구성했습니다.']],
 ['Implementation','주요 기능',['유형별 실종·목격·보호소 지도 마커, 7일 기준 표시와 클러스터링.','CLIP 기반 유사 동물 후보 추천. 장소·시각·사진·설명을 포함한 목격 제보.','지역·나이·품종·색상 기반 입양 게시글 검색 및 보호소 동물 필터.','WebSocket 기반 실시간 채팅은 팀 전체 구현 기능입니다.']],
 ['Architecture','시스템 구조',['React 화면 → Morpheus WebView → Spring Boot API ↔ MariaDB','AI: FastAPI + CLIP. 외부 연계: 보호소 공공 API·국가동물보호정보시스템·카카오 Local API. Spring Security/JWT 인증 및 JPA 데이터 접근.','MariaDB는 MySQL과 비교해 라이선스·배포 조건 및 기업 담당자 의견을 검토해 선택했습니다.']],
