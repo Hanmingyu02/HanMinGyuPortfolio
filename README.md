@@ -1,20 +1,44 @@
-# 한민규 포트폴리오
+# 개발자 포트폴리오
 
-현장실습 · 프로젝트 · 교육사항 · 자격증 · 수상내역으로 구성한 반응형 정적 웹사이트입니다. 별도 패키지 설치나 API 키가 필요하지 않습니다. 실제 이력이 제공되지 않은 항목은 업데이트 예정으로 표시합니다.
+현장실습 → 프로젝트 → 교육사항 → 자격증 → 수상내역으로 구성한 한국어 포트폴리오입니다. 기존 HTML/CSS 구조를 유지하고 Node.js 정적 빌드로 메인·프로젝트 상세 3개·404 페이지를 생성합니다. 브라우저 프레임워크, 외부 API, 백엔드, 키가 필요하지 않습니다.
 
-## 로컬 실행
+## 실행·검증
 
-저장소 폴더에서 `python3 -m http.server 8000 --bind 0.0.0.0`을 실행합니다.
+Node.js 22 이상이 필요합니다. CI는 Node.js 24를 사용합니다.
 
-## 내용 수정
+```sh
+npm ci
+npm run build
+npm run lint
+npm test
+npm run dev
+```
 
-`index.html`에서 각 섹션의 이력을 수정하고, `style.css`에서 디자인을 변경합니다. 날짜, 기관명, 역할, 결과 등 실제 정보를 입력하세요.
+`npm run dev`는 빌드 후 `dist`를 8000 포트에서 제공합니다. 루트 요청은 GitHub Pages와 동일한 `/HanMinGyuPortfolio/` 하위 경로로 이동합니다. 루트 경로 배포 시 `src/data/portfolio.mjs`의 `site.base`를 빈 문자열로, `site.url`을 실제 도메인으로 변경합니다.
 
-## GitHub Pages 배포
+## 수정 위치
 
-1. 저장소를 공개(Public)로 두면 GitHub Free에서 Pages를 사용할 수 있습니다.
-2. GitHub 저장소 Settings → Pages → Build and deployment → Source에서 **GitHub Actions**를 선택합니다.
-3. 파일을 `main` 브랜치에 푸시하면 `.github/workflows/deploy.yml`이 배포합니다. 설정 후에는 Actions에서 워크플로를 수동 실행할 수도 있습니다.
-4. 성공한 실행의 `github-pages` 배포 주소로 접속합니다. 기본 주소는 `https://hanmingyu02.github.io/HanMinGyuPortfolio/`입니다. 배포가 성공하기 전에는 이 주소가 작동하지 않을 수 있습니다.
+- `src/data/portfolio.mjs`: 프로젝트·실습·학력/교육·자격증·수상, 선택적 인적 정보, 사이트 URL.
+- `scripts/build.mjs`: 정적 HTML, 재사용 카드·갤러리·상세 레이아웃, SEO 생성.
+- `src/app.js`: 모바일 메뉴, 현재 섹션, 이미지 상태·라이트박스·포커스 복원.
+- `style.css`: 반응형 레이아웃, 포커스와 모션 감소 설정.
+- `scripts/check.mjs`: 콘텐츠 수, 앵커, 상세 섹션, 이미지 대체 텍스트, 내부 파일 링크 검사.
 
-사이트에 올리는 이력과 정보는 누구나 열람할 수 있으므로 공개할 정보만 입력하세요.
+`dist`는 생성물이므로 직접 수정하지 않습니다. 데이터 수정 후 빌드를 다시 실행하세요. 문서의 실제 콘텐츠를 구조화했으며 미제공 이름·연락처·소스 저장소·스토어·영상 링크는 만들지 않았습니다.
+
+## GitHub Pages
+
+저장소 Settings → Pages → Source를 **GitHub Actions**로 설정합니다. `main` 푸시 또는 수동 워크플로 실행 시 의존성 설치·문법 검사·빌드·콘텐츠 검증 후 `dist`를 배포합니다. 무료 GitHub Free 사용 시 공개 저장소가 필요합니다.
+
+배포 주소: `https://hanmingyu02.github.io/HanMinGyuPortfolio/`
+상세 주소: `/HanMinGyuPortfolio/projects/luno/`, `/projects/catch-me/`, `/projects/journal-mate/` (모두 사이트 하위 경로).
+
+## 확인이 필요한 자료
+
+- 한국전력기술 현장실습 시작·종료일.
+- LUNO Google Play 상세 URL 및 제공할 경우 프로젝트별 소스/시연 URL.
+- 선택 사항: 공개 이름·이메일·GitHub 링크.
+- 자격증 취득월은 제공된 2026.06 / 2025.06을 반영했습니다. 공개 전 증명서와 대조하세요.
+- 제공된 `wonderfulrosemari.github.io` 이미지 URL을 그대로 사용합니다. 현재 클라우드에서는 해당 도메인 접근이 403으로 차단되어 원본 내용·가용성은 확인하지 못했습니다. 실패 시 화면에 안내하며 확대창에서도 원본 접근 실패를 표시합니다.
+
+성과 수치에는 내부 평가·검증 세트·로컬 부하 조건을 함께 표기합니다. 운영 성능으로 일반화하지 않습니다. 실습 관련 실제 내부 화면·주소·키·비공개 코드·인프라 구성은 포함하지 않습니다.

@@ -1,0 +1,15 @@
+{
+  "name": "developer-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && node scripts/serve.mjs",
+    "lint": "node --check scripts/build.mjs && node --check scripts/serve.mjs && node --check src/app.js && node --check src/data/portfolio.mjs && node --check scripts/check.mjs",
+    "test": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
