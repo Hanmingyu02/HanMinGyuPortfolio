@@ -45,4 +45,4 @@ npm run dev
 
 ## 디자인과 브라우저 호환성
 
-큰 타이포그래피, 대표 프로젝트 중심 카드, 블루·뉴트럴 팔레트를 사용합니다. CSS Grid·clamp()·컨테이너 쿼리·text-wrap·oklch()/color-mix()·스크롤 기반 진행 표시·@starting-style 확대창 전환을 적용했습니다. 최신 기능은 @supports로 감싸 기본 색상과 레이아웃으로 대체하며, prefers-reduced-motion 사용자의 애니메이션을 제한합니다. 이미지 확대는 네이티브 dialog를 사용합니다.
+따뜻한 흰색·회색과 낮은 채도의 올리브 색을 사용합니다. 장식 그래픽 없이 본문 중심으로 정리하고, 프로젝트 3개는 같은 크기의 카드와 240px 썸네일 영역을 사용합니다. 긴 모바일 스크린샷은 비율을 유지하며 영역 안에 맞춥니다. CSS Grid·clamp()·text-wrap을 사용하고 prefers-reduced-motion을 준수합니다. 이미지 확대는 네이티브 dialog를 사용합니다.
