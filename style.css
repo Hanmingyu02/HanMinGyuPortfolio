@@ -166,22 +166,22 @@ dialog::backdrop { background: #292823bd; }
 
 /* High-contrast monochrome palette. */
 :root {
-  --bg: #e8edf3;
+  --bg: #f4f4f4;
   --ink: #000000;
   --muted: #000000;
   --blue: #000000;
-  --line: #ccd1d8;
-  --soft: #e7ebf0;
+  --line: #d8d8d8;
+  --soft: #eeeeee;
 }
-header { background: #e8edf3f5; }
+header { background: #f4f4f4f5; }
 .project-card, .experience-card, .certification-card, .award-card { background: #ffffff; }
 .project-cover, .project-card:first-child .project-cover,
-.project-card:nth-child(2) .project-cover, .project-card:nth-child(3) .project-cover { background: #e1e6ed; }
-.metric, .detail-metrics .metric, .case-study .architecture-text { background: #edf0f4; }
-.tags span, .pill, .cert-mark { background: #e7ebf0; border-color: #ccd1d8; }
-.image-open { background: #e9edf2; }
+.project-card:nth-child(2) .project-cover, .project-card:nth-child(3) .project-cover { background: #e8e8e8; }
+.metric, .detail-metrics .metric, .case-study .architecture-text { background: #f1f1f1; }
+.tags span, .pill, .cert-mark { background: #ededed; border-color: #d8d8d8; }
+.image-open { background: #ececec; }
 .button { background: #000000; border-color: #000000; color: #ffffff; }
 .button:hover { background: #292929; }
-.button.secondary { background: #ffffff; border-color: #aeb6c1; color: #000000; }
-.button.secondary:hover { background: #e7ebf0; }
-.back-top { background: #ffffff; border-color: #aeb6c1; }
+.button.secondary { background: #ffffff; border-color: #b5b5b5; color: #000000; }
+.button.secondary:hover { background: #ededed; }
+.back-top { background: #ffffff; border-color: #b5b5b5; }
