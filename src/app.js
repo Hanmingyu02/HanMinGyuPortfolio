@@ -8,7 +8,7 @@ const dialog=document.querySelector('#lightbox');let trigger;
 function wireImage(img){
  const container=img.closest('button, .project-cover')||img.parentElement;
  function success(){container.classList.remove('failed');container.classList.add('loaded');container.querySelector('.image-status')?.remove();}
- function failure(){container.classList.add('failed');const status=container.querySelector('.image-status');if(status)status.textContent='이미지를 불러올 수 없습니다 · '+img.alt;else {const label=document.createElement('span');label.className='image-status';label.textContent=img.alt+' · 이미지 접근 불가';container.append(label);}}
+ function failure(){if(img.classList.contains('logo')){img.hidden=true;img.style.display='none';return;}container.classList.add('failed');const status=container.querySelector('.image-status');if(status)status.textContent='이미지를 불러올 수 없습니다 · '+img.alt;else {const label=document.createElement('span');label.className='image-status';label.textContent=img.alt+' · 이미지 접근 불가';container.append(label);}}
  img.addEventListener('load',success);img.addEventListener('error',failure);if(img.complete){if(img.naturalWidth)success();else failure();}
 }
 document.querySelectorAll('img').forEach(img=>{if(!img.closest('dialog'))wireImage(img);});
