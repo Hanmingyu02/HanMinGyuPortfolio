@@ -166,14 +166,14 @@ dialog::backdrop { background: #292823bd; }
 
 /* High-contrast monochrome palette. */
 :root {
-  --bg: #f0f2f5;
+  --bg: #eee9df;
   --ink: #111111;
   --muted: #111111;
   --blue: #111111;
   --line: #ccd1d8;
   --soft: #e7ebf0;
 }
-header { background: #f0f2f5f5; }
+header { background: #eee9dff5; }
 .project-card, .experience-card, .certification-card, .award-card { background: #ffffff; }
 .project-cover, .project-card:first-child .project-cover,
 .project-card:nth-child(2) .project-cover, .project-card:nth-child(3) .project-cover { background: #e1e6ed; }
