@@ -167,9 +167,9 @@ dialog::backdrop { background: #292823bd; }
 /* High-contrast monochrome palette. */
 :root {
   --bg: #e8edf3;
-  --ink: #111111;
-  --muted: #111111;
-  --blue: #111111;
+  --ink: #000000;
+  --muted: #000000;
+  --blue: #000000;
   --line: #ccd1d8;
   --soft: #e7ebf0;
 }
@@ -180,8 +180,8 @@ header { background: #e8edf3f5; }
 .metric, .detail-metrics .metric, .case-study .architecture-text { background: #edf0f4; }
 .tags span, .pill, .cert-mark { background: #e7ebf0; border-color: #ccd1d8; }
 .image-open { background: #e9edf2; }
-.button { background: #111111; border-color: #111111; color: #ffffff; }
+.button { background: #000000; border-color: #000000; color: #ffffff; }
 .button:hover { background: #292929; }
-.button.secondary { background: #ffffff; border-color: #aeb6c1; color: #111111; }
+.button.secondary { background: #ffffff; border-color: #aeb6c1; color: #000000; }
 .button.secondary:hover { background: #e7ebf0; }
 .back-top { background: #ffffff; border-color: #aeb6c1; }
