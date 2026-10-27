@@ -1,4 +1,4 @@
-export const site={title:'개발자 포트폴리오',url:'https://hanmingyu02.github.io/HanMinGyuPortfolio',base:'/HanMinGyuPortfolio',name:null,email:null,github:null};
+export const site={title:'한민규 포트폴리오',url:'https://hanmingyu02.github.io/HanMinGyuPortfolio',base:'/HanMinGyuPortfolio',name:'한민규',email:null,github:null};
 export const menu=[['experience','현장실습'],['projects','프로젝트'],['education','교육사항'],['certifications','자격증'],['awards','수상내역']];
 const root='https://wonderfulrosemari.github.io/img/projects/';
 export const projects=[
