@@ -59,7 +59,7 @@ export const education=[
 {title:'AX·DX 실전 설계 아카데미',org:'한국지능정보사회진흥원(NIA) · K-ICT 빅데이터센터',date:'2026.03–04',status:'10시간',summary:'AI 도입을 위한 업무 정의 · 데이터 준비 · 결과 검증 관점 학습',details:['기초 온라인 과정에서 DX와 AX의 차이, AI 서비스 구성, 생성형 AI 신뢰성·운영 고려사항을 학습했습니다.','업무와 목표: 해결할 업무·성과 판단 기준 정의.','서비스 구성: 모델·데이터·화면·검증 절차·운영 기록의 필요성.','답변 신뢰성: 생성형 AI 오답 가능성과 외부 근거 보완 개념.','안전한 활용: 개인정보·접근권한·사람의 확인·안정성·비용. 학습 내용이며 실제 RAG 구축 성과를 의미하지 않습니다.']},
 {title:'WebKit 640 기업연계 SW 아카데미',org:'포항테크노파크 | 풀스택 개발자 양성',date:'2025.01–05',status:'640시간',summary:'기업연계 풀스택 개발 · Catch Me 팀 프로젝트',details:['HTML5·JavaScript·React 웹 프런트엔드.','Java·Spring Boot REST API, MyBatis, SQL·MySQL·MariaDB.','React Native 모바일 개발 및 유라클 Morpheus 하이브리드 앱 연동.','요구사항·명세·WBS 기반 팀 프로젝트 진행.'],project:'catch-me'}
 ];
-export const certifications=[['정보처리기사','한국산업인력공단','2026.06'],['SQLD(SQL 개발자)','한국데이터산업진흥원','2025.06']];
+export const certifications=[['정보처리기사','한국산업인력공단','2026.06'],['SQLD(SQL 개발자)','한국데이터산업진흥원','2025.06'],['한국사능력검정시험 1급','국사편찬위원회','취득일 확인 필요']];
 export const awards=[
 ['2026.02.04','DX·AX 기반 역량 강화 프로젝트 장려상','국립금오공과대학교 교수학습혁신센터','luno','awards/dx-ax-encouragement.png','보이스피싱 위험 분석 모바일 앱 팀 프로젝트'],
 ['2025.11.28','한국정보기술학회 우수논문상 동상','2025 추계종합학술대회 대학생 논문경진대회','catch-me','awards/kiit-2025-bronze.png','실종 반려동물 정보 연계와 이미지 분류 개선 논문'],
