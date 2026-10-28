@@ -190,12 +190,7 @@ header { background: #f4f4f4f5; }
 .tech-decisions > h3 { font-size: 23px; margin-bottom: 14px; }
 .tech-decision { padding: 25px 0; border-top: 1px solid var(--line); }
 .tech-decision h4 { font-size: 17px; line-height: 1.6; margin: 0 0 18px; text-wrap: balance; }
-.tech-decision dl { margin: 0; }
-.tech-decision dl > div { display: grid; grid-template-columns: 115px minmax(0, 1fr); gap: 18px; margin-top: 15px; }
-.tech-decision dt { font-size: 12px; font-weight: 650; color: var(--ink); }
-.tech-decision dd { font-size: 14px; line-height: 1.9; margin: 0; color: var(--ink); }
+ .tech-decision p { margin-bottom: 0; }
 @media(max-width: 700px) {
-  .tech-decision dl > div { grid-template-columns: 1fr; gap: 5px; }
-  .tech-decision dd { font-size: 13px; }
   .tech-decisions > h3 { font-size: 20px; }
 }

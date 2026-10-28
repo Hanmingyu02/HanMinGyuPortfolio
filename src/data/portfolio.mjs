@@ -4,11 +4,10 @@ const root='https://wonderfulrosemari.github.io/img/projects/';
 export const projects=[
 {slug:'luno',title:'LUNO',category:'모바일 보안 · AI',summary:'통화 음성의 언어·비언어 신호와 문자 URL을 결합해 보이스피싱 위험을 판별하는 모바일 보안 서비스',period:'2025.10–2026.01',role:'3인 팀 · 팀원',tags:['Spring Boot','FastAPI','Kotlin','MySQL','Snapshot Cache','k6'],logo:'logo.png',cover:'home-screen.png',metrics:[['약 86% → 92%','금융감독원 사례 약 140건 내부 라벨 일치율 · 실서비스 정확도 아님'],['480,007건 / 실패 0','로컬 1,000 RPS 목표 · H2 + 대체 로컬 AI + health 포함']],
 decisions:[
-{title:'음성을 분석 가능한 텍스트로 변환',alternative:'음성 인식 모델을 직접 구축·운영하거나 외부 STT API를 연결하는 방법이 있습니다.',selected:'CLOVA STT',reason:'LUNO는 CLOVA STT로 통화 녹음을 전사하고, 전사 결과를 AI 분석 서버로 전달합니다. 음성 인식과 위험도 분석을 분리해 전사 이후의 보이스피싱 분석 흐름을 구성했습니다.',tradeoff:'전사 오류가 후속 분석에 영향을 줄 수 있고, 외부 API의 응답 시간·비용·개인정보 처리 조건을 고려해야 합니다.'},
-{title:'단어가 달라도 비슷한 수법을 찾기',alternative:'특정 키워드 포함 여부만 확인하면 표현이 바뀐 유사 문장을 놓칠 수 있습니다.',selected:'SBERT · 의미 유사도',reason:'SBERT를 의미 유사도 신호로 사용합니다. 동일한 단어가 있는지만 보는 대신 문장의 의미가 얼마나 유사한지 분석에 반영하는 역할입니다.',tradeoff:'의미가 비슷하다는 사실만으로 범죄 여부를 확정할 수 없어 문맥·통계·규칙 신호와 함께 사용합니다.'},
-{title:'기관명보다 대화의 문맥을 보기',alternative:'키워드 규칙이나 문장 유사도만으로는 정상적인 기관 안내와 사칭·압박 표현을 구분하는 데 한계가 있습니다.',selected:'한국어 BERT · 문맥 분석',reason:'한국어 BERT를 문맥 분석 신호로 사용합니다. 단어의 존재뿐 아니라 주변 표현을 함께 다루는 역할로, SBERT의 의미 유사도와 구분해 구성했습니다.',tradeoff:'문맥 모델도 학습·평가 데이터 밖의 표현에서 오판할 수 있습니다. 모델별 기여도와 일반화 성능은 별도 검증이 필요합니다.'},
-{title:'한 가지 모델에만 판단을 맡기지 않기',alternative:'하나의 딥러닝 모델로만 분류하거나 규칙만으로 위험도를 계산하는 방법도 있습니다.',selected:'Naive Bayes + 규칙 기반 점수',reason:'Naive Bayes의 통계적 분류와 규칙 기반 키워드 점수를 SBERT·한국어 BERT 신호와 결합했습니다. 의미·문맥·통계·명시적 규칙을 서로 다른 판단 신호로 활용하는 구성입니다.',tradeoff:'여러 신호를 결합했다는 사실만으로 성능 향상을 단정할 수 없습니다. 각 모델을 제외한 비교 실험이나 최적 결합 가중치 검증 결과는 제시하지 않습니다.'},
-{title:'서비스 기능과 AI 분석의 역할 분리',alternative:'인증·이력 관리와 AI 모델 실행을 하나의 서버에서 처리하거나 역할별 서버로 나눌 수 있습니다.',selected:'Spring Boot + Python FastAPI',reason:'Spring Boot는 인증·분석 이력·서비스 API를, Python FastAPI는 AI 분석을 담당합니다. Python 모델 실행 환경과 서비스의 데이터 처리 역할을 분리한 구조입니다.',tradeoff:'서버 사이의 네트워크 요청, 오류 전달, 배포·운영 지점을 함께 관리해야 합니다. 다른 프레임워크보다 빠르다는 실측 비교를 의미하지 않습니다.'}
+{title:'CLOVA STT — 통화 내용을 텍스트로 변환',body:'통화 내용을 분석하려면 먼저 음성을 글로 바꿔야 했습니다. 음성 인식 모델을 직접 만드는 대신 CLOVA STT를 연결하고, 변환된 텍스트를 보이스피싱 분석에 사용했습니다.'},
+{title:'SBERT·한국어 BERT — 단어뿐 아니라 의미와 문맥도 확인',body:'특정 단어가 나왔다고 모두 보이스피싱은 아닙니다. 반대로 같은 수법이라도 표현은 달라질 수 있습니다. 그래서 키워드 검사에 더해 SBERT로 의미 유사도를, 한국어 BERT로 문맥을 분석했습니다.'},
+{title:'Naive Bayes·규칙 — 다른 방식의 분석 결과도 함께 반영',body:'SBERT와 BERT 결과만 사용하지 않고, Naive Bayes의 텍스트 분류 결과와 키워드별 규칙 점수도 함께 반영했습니다. 최종 위험도는 이 분석 결과들을 결합해 계산했습니다.'},
+{title:'FastAPI — Python 분석 코드를 서비스와 연결',body:'AI 분석은 Python으로, 회원 인증과 분석 이력 관리는 Spring Boot로 구현했습니다. Python 모델을 호출할 수 있도록 FastAPI 서버를 따로 두고, Spring Boot에서 분석을 요청하고 결과를 받도록 연결했습니다.'}
 ],
 sections:[
 ['Overview','프로젝트 소개',['통화 녹음을 CLOVA STT로 전사하고 여러 텍스트 모델과 규칙 점수를 결합해 위험도를 안내하는 Android 서비스입니다. 대회 당시에는 텍스트 중심으로 분석했고, 이후 발화 속도와 무음 구간을 추가했습니다. 공공 스팸번호·피싱 URL을 초기 데이터로 활용하고 위험 판정 후 대응 절차를 안내합니다.']],
