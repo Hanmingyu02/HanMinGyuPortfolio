@@ -49,9 +49,9 @@ main > section[id] { padding-top: 80px; }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
 .project-card, .project-card:first-child, .project-grid .project-card:last-child { display: flex; flex-direction: column; grid-column: auto; max-width: none; min-width: 0; border-radius: 5px; box-shadow: none; transform: none; }
 .project-card:hover { transform: none; border-color: #bfc2b3; }
-.project-cover, .project-card:first-child .project-cover { height: 240px; min-height: 240px; flex-shrink: 0; padding: 26px 22px 40px; background: #eeede7; }
+.project-cover, .project-card:first-child .project-cover { height: 180px; min-height: 180px; flex-shrink: 0; padding: 18px 20px 32px; background: #eeede7; }
 .project-card:nth-child(2) .project-cover, .project-card:nth-child(3) .project-cover { background: #eeede7; }
-.project-cover img { max-width: 100%; max-height: 174px; width: auto; height: auto; object-fit: contain; filter: none; }
+.project-cover img { max-width: 100%; max-height: 130px; width: auto; height: auto; object-fit: contain; filter: none; }
 .project-cover::before { content: none; }
 .cover-index { font-size: 9px; color: var(--ink); letter-spacing: .3px; left: 20px; bottom: 15px; }
 .project-cover.failed .image-status { color: var(--ink); font-size: 10px; }
@@ -110,7 +110,7 @@ dialog::backdrop { background: #292823bd; }
   .experience-card h3 { font-size: 14px; }
   .project-grid { grid-template-columns: 1fr; }
   .project-card, .project-card:first-child { display: flex; }
-  .project-cover, .project-card:first-child .project-cover { height: 240px; min-height: 240px; }
+  .project-cover, .project-card:first-child .project-cover { height: 180px; min-height: 180px; }
   .summary, .meta, .project-info > .tags { min-height: 0; }
   .project-info { padding: 24px; }
   .award-card h3 { font-size: 15px; }
@@ -122,13 +122,13 @@ dialog::backdrop { background: #292823bd; }
 .project-title { min-width: 0; gap: 10px; align-items: center; }
 .project-title h3 { min-width: 0; white-space: nowrap; font-size: clamp(21px, 1.7vw, 25px); line-height: 1.3; }
 .project-title .logo { flex: 0 0 30px; }
-.project-info { display: grid; grid-template-rows: 40px 100px 68px 74px minmax(220px, 1fr); gap: 12px; padding: 26px 24px 20px; }
+.project-info { display: grid; grid-template-rows: 34px minmax(78px, auto) minmax(48px, auto) minmax(54px, auto) minmax(190px, 1fr); gap: 10px; padding: 20px; }
 .project-title, .project-info .summary, .project-info .meta, .project-info > .tags, .project-info .metrics, .project-link { margin: 0; min-height: 0; }
 .project-info .summary { font-size: 14px; line-height: 1.85; }
 .project-info .meta { font-size: 12px; line-height: 1.9; }
 .project-info > .tags { align-content: start; align-items: start; }
 .project-info .metrics { display: grid; grid-template-rows: 1fr 1fr; gap: 10px; }
-.project-info .metric { padding: 17px 15px; }
+.project-info .metric { padding: 12px 13px; }
 .project-info .metric p { font-size: 11px; line-height: 1.8; }
 .project-link { padding-top: 14px; align-self: end; }
 .experience-card { border-radius: 9px; }
