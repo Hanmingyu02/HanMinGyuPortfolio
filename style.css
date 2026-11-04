@@ -194,3 +194,9 @@ header { background: #f4f4f4f5; }
 @media(max-width: 700px) {
   .tech-decisions > h3 { font-size: 20px; }
 }
+
+.demo-video { margin: 32px 0; }
+.demo-video h3 { font-size: 21px; }
+.demo-video video { display: block; width: 100%; max-height: 600px; background: #000; border-radius: 6px; }
+.demo-video figcaption { margin-top: 12px; font-size: 13px; }
+.demo-video .video-error { font-size: 13px; }

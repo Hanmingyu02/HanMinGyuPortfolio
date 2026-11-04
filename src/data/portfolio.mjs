@@ -2,7 +2,7 @@ export const site={title:'한민규 포트폴리오',url:'https://hanmingyu02.gi
 export const menu=[['experience','현장실습'],['projects','프로젝트'],['education','교육사항'],['certifications','자격증'],['awards','수상내역']];
 const root='https://wonderfulrosemari.github.io/img/projects/';
 export const projects=[
-{slug:'luno',title:'LUNO',category:'모바일 보안 · AI',summary:'통화 음성의 언어·비언어 신호와 문자 URL을 결합해 보이스피싱 위험을 판별하는 모바일 보안 서비스',period:'2025.10–2026.01',role:'3인 팀 · 팀원',tags:['Spring Boot','FastAPI','Kotlin','MySQL','Snapshot Cache','k6'],logo:'logo.png',cover:'home-screen.png',metrics:[['약 86% → 92%','금융감독원 사례 약 140건 내부 라벨 일치율 · 실서비스 정확도 아님'],['480,007건 / 실패 0','로컬 1,000 RPS 목표 · H2 + 대체 로컬 AI + health 포함']],
+{slug:'luno',title:'LUNO',video:{src:'/media/luno/demo.mp4',original:'https://wonderfulrosemari.github.io/img/projects/luno/demo.mp4',title:'LUNO 시연 영상'},category:'모바일 보안 · AI',summary:'통화 음성의 언어·비언어 신호와 문자 URL을 결합해 보이스피싱 위험을 판별하는 모바일 보안 서비스',period:'2025.10–2026.01',role:'3인 팀 · 팀원',tags:['Spring Boot','FastAPI','Kotlin','MySQL','Snapshot Cache','k6'],logo:'logo.png',cover:'home-screen.png',metrics:[['약 86% → 92%','금융감독원 사례 약 140건 내부 라벨 일치율 · 실서비스 정확도 아님'],['480,007건 / 실패 0','로컬 1,000 RPS 목표 · H2 + 대체 로컬 AI + health 포함']],
 decisions:[
 {title:'CLOVA STT — 통화 내용을 텍스트로 변환',body:'통화 내용을 분석하려면 먼저 음성을 글로 바꿔야 했습니다. 음성 인식 모델을 직접 만드는 대신 CLOVA STT를 연결하고, 변환된 텍스트를 보이스피싱 분석에 사용했습니다.'},
 {title:'SBERT·한국어 BERT — 단어뿐 아니라 의미와 문맥도 확인',body:'특정 단어가 나왔다고 모두 보이스피싱은 아닙니다. 반대로 같은 수법이라도 표현은 달라질 수 있습니다. 그래서 키워드 검사에 더해 SBERT로 의미 유사도를, 한국어 BERT로 문맥을 분석했습니다.'},
@@ -25,7 +25,7 @@ sections:[
 ['Results','결과와 검증 범위',['Google Play 배포. 스토어 상세 URL은 확인 후 추가할 예정입니다.','내부 약 140건 정답 일치율 약 86% → 92%. 로컬 반복시험 480,007건 실패 0건이며 위 시험 조건에 한정됩니다.']],
 ['Awards','관련 수상',['DX·AX 기반 역량 강화 프로젝트 장려상 · 국립금오공과대학교 교수학습혁신센터 · 2026.02.04']],
 ['Next Steps','다음 개선 방향',['공공 목록과 사용자 제보를 중복 제거·관리자 검증을 거쳐 결합하는 방안을 계획하고 있습니다.','판정 근거·불확실성 시각화 및 공공 목록 업데이트 체계를 고도화할 예정입니다.']],
-['Links','관련 자료',['화면·구조도·상장은 아래 원본 이미지로 확인할 수 있습니다. 별도 소스 코드·스토어·시연 영상 URL은 제공되지 않았습니다.']]],
+['Links','관련 자료',['화면·구조도·상장은 아래 원본 이미지로 확인할 수 있습니다. 별도 소스 코드·스토어 URL은 제공되지 않았습니다.']]],
 media:[['home-screen.png','앱 홈 화면'],['voice-result.png','실제 앱 통화 분석 결과'],['sms-analysis.png','문자 URL 분석 화면'],['phone-input.png','전화번호 입력 화면'],['post-incident-guide.png','피해 의심 시 사후 대응 안내'],['voice-analysis-architecture.png','음성 분석 시스템 처리 흐름'],['monitoring/before-timeout.jpg','실행 환경 변경 전 타임아웃 관측 화면'],['monitoring/after-timeout.jpg','실행 환경 변경 후 모니터링 화면']]},
 {slug:'catch-me',title:'Catch Me',category:'하이브리드 앱 · AI',summary:'AI 기반 실종·목격 제보와 보호자·입양자를 연결하는 유기동물 통합 플랫폼',period:'1개월 · 본격 구현 약 2주',role:'5인 팀 · 팀원',tags:['Spring Boot','React','MariaDB','FastAPI','CLIP','Morpheus'],logo:'logo.png',cover:'map-report.png',metrics:[['86.33% → 95.00%','동일 검증 이미지 300장 · 259 → 285장 정답 · +8.67%p'],['약 3만 장','CLIP 추가 학습에 사용한 이미지 수']],
 sections:[

@@ -19,3 +19,5 @@ dialog.querySelector('.close-lightbox').addEventListener('click',()=>dialog.clos
 const links=[...navigation.querySelectorAll('a')];
 const sections=[...document.querySelectorAll('main > section[id]')];
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{const current=entries.filter(x=>x.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(current)links.forEach(a=>{const active=a.hash==='#'+current.target.id;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});},{rootMargin:'-12% 0px -48% 0px',threshold:[0,.2,.5]});sections.forEach(x=>observer.observe(x));}
+
+document.querySelectorAll('.demo-video video').forEach(video=>{const showError=()=>{video.closest('figure').querySelector('.video-error').hidden=false;};video.addEventListener('error',showError);video.querySelector('source').addEventListener('error',showError);});
