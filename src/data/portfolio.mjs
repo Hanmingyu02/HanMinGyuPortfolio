@@ -25,7 +25,7 @@ sections:[
 ['Results','결과와 검증 범위',['Google Play 배포. 스토어 상세 URL은 확인 후 추가할 예정입니다.','내부 약 140건 정답 일치율 약 86% → 92%. 로컬 반복시험 480,007건 실패 0건이며 위 시험 조건에 한정됩니다.']],
 ['Awards','관련 수상',['DX·AX 기반 역량 강화 프로젝트 장려상 · 국립금오공과대학교 교수학습혁신센터 · 2026.02.04']],
 ['Next Steps','다음 개선 방향',['공공 목록과 사용자 제보를 중복 제거·관리자 검증을 거쳐 결합하는 방안을 계획하고 있습니다.','판정 근거·불확실성 시각화 및 공공 목록 업데이트 체계를 고도화할 예정입니다.']],
-['Links','관련 자료',['화면·구조도·상장은 아래 원본 이미지로 확인할 수 있습니다. 별도 소스 코드·스토어 URL은 제공되지 않았습니다.']]],
+['Demo','시연 영상',[]]],
 media:[['home-screen.png','앱 홈 화면'],['voice-result.png','실제 앱 통화 분석 결과'],['sms-analysis.png','문자 URL 분석 화면'],['phone-input.png','전화번호 입력 화면'],['post-incident-guide.png','피해 의심 시 사후 대응 안내'],['voice-analysis-architecture.png','음성 분석 시스템 처리 흐름'],['monitoring/before-timeout.jpg','실행 환경 변경 전 타임아웃 관측 화면'],['monitoring/after-timeout.jpg','실행 환경 변경 후 모니터링 화면']]},
 {slug:'catch-me',title:'Catch Me',category:'하이브리드 앱 · AI',summary:'AI 기반 실종·목격 제보와 보호자·입양자를 연결하는 유기동물 통합 플랫폼',period:'1개월 · 본격 구현 약 2주',role:'5인 팀 · 팀원',tags:['Spring Boot','React','MariaDB','FastAPI','CLIP','Morpheus'],logo:'logo.png',cover:'map-report.png',metrics:[['86.33% → 95.00%','동일 검증 이미지 300장 · 259 → 285장 정답 · +8.67%p'],['약 3만 장','CLIP 추가 학습에 사용한 이미지 수']],
 sections:[
