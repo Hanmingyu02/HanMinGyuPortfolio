@@ -630,3 +630,16 @@ main > section > .section-heading h2, #experience > .section-heading h2 { font-s
 @media(max-width:700px) {
  main > section > .section-heading h2, #experience > .section-heading h2 { font-size: 32px; }
 }
+
+/* Consistent education metadata badges: date, status and course hours. */
+.education-card .education-meta { align-items: center; gap: 8px; }
+.education-card .education-date,
+.education-card .pill,
+.education-card .pill.is-ongoing {
+ display: inline-flex; align-items: center; justify-content: center;
+ min-height: 34px; max-width: 100%; padding: 6px 10px;
+ border: 1px solid #e1e1e1; border-radius: 6px; background: #f3f3f3;
+ color: #000; font-size: 13px; font-weight: 500; line-height: 20px;
+ white-space: normal; font-variant-numeric: tabular-nums;
+}
+.education-card .pill.is-ongoing::before { flex-shrink: 0; }
