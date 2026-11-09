@@ -414,3 +414,33 @@ body { line-height: 1.65; }
 .hero { padding-top: 44px; padding-bottom: 36px; }
 .hero .portfolio-name { font-size: clamp(26px, 3vw, 36px); line-height: 1.4; letter-spacing: -.04em; margin: 0 0 20px; }
 .hero .hero-actions { margin-top: 0; }
+
+/* A restrained profile opening instead of promotional copy and counters. */
+.profile-intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: 50px; align-items: end; padding: 64px 0 48px; border-bottom: 1px solid #d7d7d7; }
+.profile-label { font-size: 12px; font-weight: 600; letter-spacing: .6px; margin: 0 0 17px; color: #000; }
+.profile-identity h1 { font-size: clamp(44px,5vw,68px); font-weight: 650; line-height: 1.1; letter-spacing: -.065em; margin: 0 0 20px; }
+.profile-academic { font-size: 14px; line-height: 1.6; margin: 0; color: #000; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 30px; }
+.profile-links a { font-size: 13px; line-height: 1.6; padding-bottom: 5px; border-bottom: 1px solid #9d9d9d; }
+.profile-links a:hover { border-bottom-color: #000; }
+.profile-work { justify-self: end; padding-left: 25px; border-left: 1px solid #d5d5d5; }
+.profile-work-label { font-size: 11px; font-weight: 600; margin: 0 0 12px; }
+.profile-company { font-size: 21px; font-weight: 600; margin: 0 0 5px; }
+.profile-team { font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+.profile-dates { font-size: 12px; font-variant-numeric: tabular-nums; margin: 0; }
+.profile-intro + #experience { padding-top: 45px; }
+#experience > .section-heading { display: flex; align-items: baseline; gap: 15px; margin-bottom: 25px; }
+#experience > .section-heading .eyebrow { font-size: 10px; margin: 0; letter-spacing: 1px; }
+#experience > .section-heading h2 { font-size: 29px; margin: 0; }
+@media(max-width:700px) {
+ .profile-intro { grid-template-columns: 1fr; gap: 30px; padding: 40px 0 32px; }
+ .profile-identity h1 { font-size: 48px; }
+ .profile-work { justify-self: stretch; padding: 20px 0 0; border: 0; border-top: 1px solid #dedede; }
+ .profile-work-label { margin-bottom: 7px; }
+ .profile-company { font-size: 18px; }
+ .profile-team { margin-bottom: 7px; }
+ .profile-links { margin-top: 24px; }
+ .profile-intro + #experience { padding-top: 30px; }
+ #experience > .section-heading { gap: 12px; flex-wrap: wrap; }
+ #experience > .section-heading h2 { font-size: 25px; }
+}
