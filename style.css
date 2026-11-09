@@ -643,3 +643,5 @@ main > section > .section-heading h2, #experience > .section-heading h2 { font-s
  white-space: normal; font-variant-numeric: tabular-nums;
 }
 .education-card .pill.is-ongoing::before { flex-shrink: 0; }
+
+.education-card .education-summary { color: #292929; }
