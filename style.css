@@ -584,3 +584,26 @@ main > #projects, main > #certifications { --section-bg: #fff; }
 .copyright-footer { width: 100%; max-width: none; margin: 0; background: #fff; padding: 28px 20px; }
 
 .copyright-footer { background: #25272b; color: #fff; }
+
+/* Right-side section navigation; content keeps its own reading width. */
+html { scroll-padding-top: 35px; }
+header { position: fixed; top: 50%; right: 22px; left: auto; z-index: 20; width: 178px; padding: 0; transform: translateY(-50%); border: 0; background: transparent; backdrop-filter: none; }
+header .header-inner { display: flex; flex-direction: column; align-items: stretch; gap: 18px; width: 100%; height: auto; min-height: 0; margin: 0; padding: 17px 14px; background: #fff; border: 1px solid #e1e1e1; border-radius: 15px; box-shadow: 0 4px 18px #00000006; }
+header .brand { font-size: 13px; letter-spacing: -.5px; padding: 0 6px 15px; border-bottom: 1px solid #ededed; }
+header nav { display: flex; flex-direction: column; gap: 5px; }
+header nav a { display: block; width: 100%; padding: 11px 12px; border-radius: 8px; font-size: 13px; line-height: 1.5; }
+header nav a.active::after { display: none; }
+main { width: min(1160px,calc(100% - 270px)); margin-left: auto; margin-right: 226px; }
+@media(max-width:800px) {
+ html { scroll-padding-top: 80px; }
+ main { width: calc(100% - 40px); margin: 0 auto; }
+ header { top: 16px; right: 16px; width: auto; transform: none; }
+ header .header-inner { display: block; position: relative; width: auto; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+ header .brand { display: none; }
+ header .menu-toggle { display: flex; align-items: center; gap: 14px; padding: 10px 14px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 3px 10px #00000008; font-size: 12px; }
+ header nav { display: none; position: absolute; top: 51px; right: 0; left: auto; width: 190px; margin: 0; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 8px 24px #00000010; }
+ header nav.open { display: flex; }
+ header nav a { padding: 12px; }
+ .profile-intro { margin-top: 72px; }
+ main:has(> .detail-top), main:has(> .not-found) { padding-top: 64px; }
+}
