@@ -444,3 +444,82 @@ body { line-height: 1.65; }
  #experience > .section-heading { gap: 12px; flex-wrap: wrap; }
  #experience > .section-heading h2 { font-size: 25px; }
 }
+
+/* Contemporary monochrome layout: floating navigation and asymmetric panels. */
+:root { --bg: #f2f2f2; --line: #e2e2e2; }
+html { scrollbar-gutter: stable; }
+body { background: var(--bg); }
+header { background: #f2f2f2d9; backdrop-filter: blur(18px); border: 0; padding: 16px 0 10px; }
+.header-inner { height: 64px; padding: 0 22px; background: #fff; border: 1px solid #e5e5e5; border-radius: 18px; box-shadow: 0 3px 14px #00000003; }
+.brand { font-size: 15px; letter-spacing: -.5px; }
+header nav { gap: 4px; }
+header nav a { font-size: 12px; padding: 8px 13px; border-radius: 10px; line-height: 1.6; transition: background .15s; }
+header nav a:hover { background: #f1f1f1; }
+header nav a.active { background: #111; color: #fff; }
+header nav a.active::after { display: none; }
+.profile-intro { display: grid; grid-template-columns: 1.55fr 1fr; align-items: stretch; gap: 18px; padding: 22px 0 0; border: 0; }
+.profile-identity { display: flex; flex-direction: column; min-height: 405px; padding: 30px 34px; border: 1px solid #e1e1e1; border-radius: 25px; background: #fff; }
+.profile-topline { display: flex; align-items: center; justify-content: space-between; gap: 18px; font-size: 12px; line-height: 1.6; }
+.profile-topline > span:last-child { font-size: 21px; }
+.profile-name-block { margin: auto 0; padding: 32px 0; }
+.profile-label { margin: 0 0 10px; font-size: 12px; font-weight: 400; letter-spacing: 0; }
+.profile-identity h1 { font-size: clamp(58px,6.2vw,88px); font-weight: 700; letter-spacing: -.075em; line-height: 1.1; margin: 0 0 13px; }
+.profile-academic { font-size: 14px; margin: 0; }
+.profile-bottom { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.profile-bottom .tags { gap: 6px; }
+.profile-bottom .tags span { padding: 6px 10px; border: 0; background: #f2f2f2; border-radius: 7px; font-size: 11px; }
+.profile-project-link { font-size: 12px; font-weight: 600; border-bottom: 1px solid #aaa; padding-bottom: 3px; }
+.profile-side { display: grid; grid-template-rows: 1fr auto; gap: 18px; }
+.profile-work { display: block; justify-self: stretch; margin: 0; padding: 26px; border: 1px solid #ddd; border-radius: 23px; background: #e7e8e9; transition: background .2s; }
+.profile-work:hover { background: #dfe0e2; }
+.profile-company { font-size: 25px; line-height: 1.4; font-weight: 650; letter-spacing: -.7px; margin: 24px 0 5px; }
+.profile-team { font-size: 13px; line-height: 1.6; margin: 0 0 16px; }
+.profile-dates { font-size: 12px; margin: 0; }
+.profile-projects { padding: 19px 25px 14px; border-radius: 23px; border: 1px solid #e1e1e1; background: #fff; }
+.profile-work-label { font-size: 11px; font-weight: 400; margin: 0 0 8px; }
+.profile-project-row { display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #eee; }
+.profile-project-row:hover { text-decoration: underline; text-underline-offset: 4px; }
+main > section[id] { padding-top: 65px; }
+.profile-intro + #experience { padding-top: 55px; }
+main > section > .section-heading, #experience > .section-heading { display: flex; align-items: center; gap: 17px; margin-bottom: 25px; }
+main > section > .section-heading .eyebrow, #experience > .section-heading .eyebrow { font-size: 10px; letter-spacing: .8px; margin: 0; }
+main > section > .section-heading h2, #experience > .section-heading h2 { font-size: 29px; line-height: 1.4; margin: 0; letter-spacing: -.9px; }
+main > section > .section-heading > p:last-child:not(.eyebrow) { margin-left: auto; font-size: 12px; }
+.internship-profile { max-width: none; padding: 28px 30px; border-radius: 20px; border: 1px solid #e1e1e1; background: #fff; margin-bottom: 20px; }
+.internship-profile > p:last-child { margin-bottom: 0; }
+.experience-card { border-color: #e1e1e1; border-radius: 16px; }
+.project-grid .project-card { border-radius: 20px; border-color: #e1e1e1; }
+.education-list .education-card { border-radius: 20px; border-color: #e1e1e1; }
+.certification-card, .award-card { border-radius: 16px; border-color: #e1e1e1; }
+@media(max-width:800px) {
+ .profile-intro { grid-template-columns: 1.2fr 1fr; }
+ .profile-identity { padding: 26px; }
+ .profile-bottom { align-items: flex-start; flex-direction: column; }
+ .profile-company { font-size: 22px; }
+ .profile-work { padding: 22px; }
+ .profile-projects { padding-left: 22px; padding-right: 22px; }
+}
+@media(max-width:700px) {
+ header { padding-top: 10px; }
+ .header-inner { min-height: 60px; height: 60px; padding: 0 15px; border-radius: 14px; }
+ header nav { top: 78px; left: 18px; right: 18px; border: 1px solid #ddd; border-radius: 14px; padding: 10px; }
+ .menu-toggle { border: 0; padding: 6px; background: transparent; }
+ .profile-intro { grid-template-columns: 1fr; gap: 12px; padding-top: 12px; }
+ .profile-identity { min-height: 310px; padding: 25px; border-radius: 20px; }
+ .profile-name-block { padding: 26px 0; }
+ .profile-identity h1 { font-size: 67px; }
+ .profile-side { grid-template-columns: 1fr; grid-template-rows: auto; gap: 12px; }
+ .profile-work { border-radius: 18px; padding: 23px; }
+ .profile-company { margin-top: 12px; font-size: 23px; }
+ .profile-team { margin-bottom: 10px; }
+ .profile-projects { border-radius: 18px; padding: 17px 23px; }
+ .profile-bottom { flex-direction: row; align-items: center; gap: 12px; }
+ .profile-bottom .tags span { font-size: 10px; padding: 5px 7px; }
+ .profile-project-link { font-size: 11px; }
+ .profile-intro + #experience { padding-top: 40px; }
+ main > section > .section-heading, #experience > .section-heading { align-items: baseline; flex-wrap: wrap; gap: 10px 14px; }
+ main > section > .section-heading h2, #experience > .section-heading h2 { font-size: 26px; }
+ main > section > .section-heading > p:last-child:not(.eyebrow) { width: 100%; margin-left: 0; }
+ .internship-profile { padding: 23px; border-radius: 17px; }
+}
+@media(prefers-reduced-motion:reduce) { header nav a, .profile-work { transition: none; } }
