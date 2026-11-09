@@ -580,3 +580,5 @@ main > #projects, main > #certifications { --section-bg: #fff; }
 @media(max-width:700px) { main > section[id] { padding-bottom: 45px; } }
 
 .copyright-footer { display: block; text-align: center; font-size: 12px; line-height: 1.6; padding: 28px 0; margin-top: 0; border: 0; color: #000; }
+
+.copyright-footer { width: 100%; max-width: none; margin: 0; background: #fff; padding: 28px 20px; }
