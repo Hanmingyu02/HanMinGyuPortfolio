@@ -327,3 +327,11 @@ dialog.architecture-dark img { background: #000; }
   .card-detail-hint { transition: none; }
   .project-card:hover, .project-card:hover .card-detail-hint { transform: none; }
 }
+
+/* Keep cards wide and apply the same lift to every grid item. */
+.project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (hover: hover) and (pointer: fine) {
+  .project-grid .project-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px -12px #00000026; border-color: #bdbdbd; }
+}
+@media(max-width:700px) { .project-grid { grid-template-columns: 1fr; } }
+@media(prefers-reduced-motion:reduce) { .project-grid .project-card:hover { transform: none; } }
