@@ -253,3 +253,20 @@ dialog.architecture-dark img { background: #000; }
   .project-info { grid-template-rows: auto auto auto auto auto; gap: 16px; }
   .project-info > .tags { min-height: 0; }
 }
+
+/* Education cards: two columns on desktop, one on smaller screens. */
+.education-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; border: 0; align-items: start; }
+.education-card { display: flex; flex-direction: column; gap: 20px; min-width: 0; padding: 28px; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+.education-meta { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.education-meta .eyebrow { margin: 0; font-size: 11px; }
+.education-card h3 { font-size: 20px; line-height: 1.5; margin-bottom: 10px; }
+.education-card .org { font-size: 12px; line-height: 1.8; }
+.education-card p { line-height: 1.9; }
+.education-card details { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+.education-card summary { font-size: 13px; }
+.education-card .pill { max-width: 100%; white-space: normal; }
+@media(max-width:700px) {
+  .education-list { grid-template-columns: 1fr; gap: 16px; }
+  .education-card { padding: 23px; gap: 18px; }
+  .education-card h3 { font-size: 18px; }
+}
