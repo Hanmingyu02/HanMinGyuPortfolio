@@ -617,3 +617,5 @@ main { width: min(1160px, calc(100% - 452px)); margin-inline: auto; }
 html { scrollbar-gutter: stable both-edges; }
 
 .education-card .is-ongoing::before { background: #229954; }
+
+.education-card .education-date { font-size: 13px; line-height: 1.6; font-variant-numeric: tabular-nums; }
