@@ -294,3 +294,36 @@ dialog.architecture-dark img { background: #000; }
   .education-card { border-radius: 15px; }
   .project-info, .education-card { padding: 23px; }
 }
+
+/* Project card composition follows the supplied reference. */
+.project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.project-card, .project-card:first-child, .project-grid .project-card:last-child { border-radius: 4px; border: 1px solid #cfcfcf; background: #fff; }
+.project-info { display: flex; flex-direction: column; gap: 0; padding: 32px; }
+.project-title { width: 100%; gap: 27px; margin: 0 0 14px; }
+.project-heading-row { width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+.project-heading-row h3 { font-size: 28px; letter-spacing: -.8px; }
+.card-detail-hint { flex-shrink: 0; font-size: 12px; font-weight: 650; border-bottom: 1px solid #666; padding-bottom: 3px; }
+.project-info .meta { font-size: 13px; margin: 0 0 27px; min-height: 48px; }
+.project-info .summary { font-size: 17px; line-height: 1.85; margin-bottom: 19px; min-height: 62px; }
+.project-info .summary strong { font-weight: 650; }
+.card-overview { font-size: 15px; line-height: 1.95; margin: 0 0 20px; }
+.card-source { font-size: 12px; line-height: 1.8; margin: 0 0 23px; }
+.card-highlights { list-style: none; padding: 0 0 0 16px; margin: 5px 0 32px; border-left: 2px solid #727c70; }
+.card-highlights li { font-size: 13px; line-height: 1.85; font-weight: 600; margin: 0; }
+.project-info > .tags { margin-top: auto; padding-top: 16px; min-height: 0; gap: 7px; }
+.project-card .tags span { border: 0; border-radius: 2px; padding: 5px 8px; font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace; font-size: 10px; background: #f0f0ed; }
+.project-title .project-icon { width: 56px; height: 56px; border-radius: 13px; }
+.project-title .project-icon .logo { width: 56px; height: 56px; border-radius: 13px; }
+.project-title .project-icon[data-project="catch-me"] .logo { width: 42px; height: 42px; border-radius: 9px; }
+@media(max-width:700px) {
+  .project-grid { grid-template-columns: 1fr; gap: 20px; }
+  .project-info { padding: 25px; }
+  .project-title { gap: 22px; }
+  .project-heading-row h3 { font-size: 25px; }
+  .card-detail-hint { font-size: 11px; }
+  .project-info .meta, .project-info .summary { min-height: 0; }
+  .project-info .meta { margin-bottom: 22px; }
+  .project-info .summary { font-size: 16px; }
+  .card-overview { font-size: 14px; }
+  .card-highlights { margin-bottom: 20px; }
+}
