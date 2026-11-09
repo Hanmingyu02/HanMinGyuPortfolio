@@ -552,3 +552,18 @@ main > section > .section-heading > p:last-child:not(.eyebrow) { margin-left: au
  .profile-intro .profile-project-links { gap: 12px 19px; }
  .profile-intro .profile-project-row { font-size: 11px; }
 }
+
+/* One outer card for the internship; internal tasks are divided by rules. */
+.internship-card { padding: 30px; border: 1px solid #dedede; border-radius: 20px; background: #fff; }
+.internship-card .internship-profile { padding: 0; margin-bottom: 24px; border: 0; border-radius: 0; background: transparent; }
+.internship-card .experience-list { margin-top: 26px; }
+.internship-card .experience-card { margin: 0; border: 0; border-top: 1px solid #e2e2e2; border-radius: 0; background: transparent; box-shadow: none; }
+.internship-card .experience-card summary { padding: 24px 0; }
+.internship-card .experience-card .details-body { padding: 0 0 26px 48px; }
+.internship-card .experience-card:last-child:not([open]) > summary { padding-bottom: 0; }
+.internship-card .experience-card:last-child[open] > .details-body { padding-bottom: 0; }
+@media(max-width:700px) {
+ .internship-card { padding: 23px; border-radius: 17px; }
+ .internship-card .experience-card summary { gap: 10px; padding-top: 21px; padding-bottom: 21px; }
+ .internship-card .experience-card .details-body { padding-left: 0; }
+}
