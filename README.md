@@ -35,7 +35,6 @@ npm run dev
 
 ## 확인이 필요한 자료
 
-- 생성형 AI 활용 챗봇개발 실무 교육과정의 교육기간.
 
 - LUNO Google Play 상세 URL 및 제공할 경우 프로젝트별 소스/시연 URL.
 - 선택 사항: 공개 이름·이메일·GitHub 링크.
