@@ -270,3 +270,13 @@ dialog.architecture-dark img { background: #000; }
   .education-card { padding: 23px; gap: 18px; }
   .education-card h3 { font-size: 18px; }
 }
+
+.education-card { position: relative; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+@media (hover: hover) and (pointer: fine) {
+  .education-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px -12px #00000030, 0 5px 12px #0000000a; border-color: #b8b8b8; z-index: 1; }
+}
+.education-card:focus-within { border-color: #999; }
+@media (prefers-reduced-motion: reduce) {
+  .education-card { transition: none; }
+  .education-card:hover { transform: none; }
+}
