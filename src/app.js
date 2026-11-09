@@ -13,7 +13,7 @@ function wireImage(img){
 }
 document.querySelectorAll('img').forEach(img=>{if(!img.closest('dialog'))wireImage(img);});
 document.querySelectorAll('.image-open').forEach(button=>button.addEventListener('click',()=>{
- trigger=button;const img=dialog.querySelector('img');const status=dialog.querySelector('.lightbox-status');document.querySelector('#lightbox-caption').textContent=button.dataset.caption;img.alt=button.dataset.caption;status.textContent='이미지 불러오는 중…';img.onload=()=>{status.textContent='';};img.onerror=()=>{status.textContent='원본 이미지에 접근할 수 없습니다. 잠시 후 다시 시도하거나 원본 링크를 확인해 주세요.';};img.src=button.dataset.src;dialog.querySelector('.original').href=button.dataset.src;dialog.showModal();document.body.classList.add('modal-open');dialog.querySelector('button').focus();
+ trigger=button;dialog.classList.toggle('architecture-dark',Boolean(button.closest('.architecture-dark')));const img=dialog.querySelector('img');const status=dialog.querySelector('.lightbox-status');document.querySelector('#lightbox-caption').textContent=button.dataset.caption;img.alt=button.dataset.caption;status.textContent='이미지 불러오는 중…';img.onload=()=>{status.textContent='';};img.onerror=()=>{status.textContent='원본 이미지에 접근할 수 없습니다. 잠시 후 다시 시도하거나 원본 링크를 확인해 주세요.';};img.src=button.dataset.src;dialog.querySelector('.original').href=button.dataset.src;dialog.showModal();document.body.classList.add('modal-open');dialog.querySelector('button').focus();
 }));
 dialog.querySelector('.close-lightbox').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');trigger?.focus();});
 const links=[...navigation.querySelectorAll('a')];
