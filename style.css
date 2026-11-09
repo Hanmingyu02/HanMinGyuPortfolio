@@ -410,3 +410,7 @@ body { line-height: 1.65; }
 .experience-card > summary > .expand::before { content: '+'; }
 .experience-card[open] > summary > .expand { transform: none; }
 .experience-card[open] > summary > .expand::before { content: '×'; }
+
+.hero { padding-top: 44px; padding-bottom: 36px; }
+.hero .portfolio-name { font-size: clamp(26px, 3vw, 36px); line-height: 1.4; letter-spacing: -.04em; margin: 0 0 20px; }
+.hero .hero-actions { margin-top: 0; }
