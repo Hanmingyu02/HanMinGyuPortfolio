@@ -280,3 +280,17 @@ dialog.architecture-dark img { background: #000; }
   .education-card { transition: none; }
   .education-card:hover { transform: none; }
 }
+
+/* Softer card silhouettes with consistent spacing. */
+.project-card, .project-card:first-child, .project-grid .project-card:last-child,
+.education-card { border-radius: 18px; border-color: #dedede; background: #fff; }
+.project-info { padding: 26px; }
+.education-card { padding: 28px; }
+.project-card { overflow: hidden; }
+.project-card .tags span { border-radius: 6px; }
+.education-card .pill { border-radius: 7px; padding: 5px 10px; }
+@media(max-width:700px) {
+  .project-card, .project-card:first-child, .project-grid .project-card:last-child,
+  .education-card { border-radius: 15px; }
+  .project-info, .education-card { padding: 23px; }
+}
