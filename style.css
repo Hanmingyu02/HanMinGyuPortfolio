@@ -567,3 +567,14 @@ main > section > .section-heading > p:last-child:not(.eyebrow) { margin-left: au
  .internship-card .experience-card summary { gap: 10px; padding-top: 21px; padding-bottom: 21px; }
  .internship-card .experience-card .details-body { padding-left: 0; }
 }
+
+/* Full-width alternating section backgrounds without changing content width. */
+main > section[id] {
+  --section-bg: var(--bg);
+  background: var(--section-bg);
+  box-shadow: 0 0 0 100vmax var(--section-bg);
+  clip-path: inset(0 -100vmax);
+  padding-bottom: 65px;
+}
+main > #projects, main > #certifications { --section-bg: #fff; }
+@media(max-width:700px) { main > section[id] { padding-bottom: 45px; } }
