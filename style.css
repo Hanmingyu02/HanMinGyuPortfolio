@@ -645,3 +645,6 @@ main > section > .section-heading h2, #experience > .section-heading h2 { font-s
 .education-card .pill.is-ongoing::before { flex-shrink: 0; }
 
 .education-card .education-summary { color: #292929; }
+
+main > section > .section-heading .eyebrow,
+#experience > .section-heading .eyebrow { font-size: 13px; color: #444444; }
