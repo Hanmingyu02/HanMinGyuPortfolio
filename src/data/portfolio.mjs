@@ -56,7 +56,7 @@ sections:[
 media:[['screens/url.png','웹페이지 요약·번역 모드'],['screens/pdf-one.png','PDF 추가 및 추출 화면'],['screens/pdf-two.png','복수 PDF 비교 화면'],['screens/extension-structure.png','Chrome 확장 프로그램 구성'],['screens/system-architecture-1.png','시스템 처리 구조도 1'],['screens/system-architecture-2.png','시스템 처리 구조도 2'],['agent-workflow.svg','생성·검증 에이전트 피드백 흐름']]}
 ].map(p=>({...p,image:path=>root+p.slug+'/'+path}));
 export const internship={
-company:'한국전력기술',department:'AX추진처',period:'2026.09.01–2026.12.31',
+company:'한국전력기술',department:'AX추진처 · AI솔루션개발팀',period:'2026.09.01–2026.12.31',
 intro:'사내 AI 서비스에서 외부 상용 AI 모델을 선택해 사용할 수 있는 SAIFE X 채팅 기능을 개발했습니다. 모델 선택 화면과 추론 수준 설정, 사용자별 API Key 관리 화면을 만들고, 선택한 모델에 맞게 요청 대상을 바꾸는 로직을 연결했습니다.',
 context:'폐쇄망 GPU 서버에서는 Qwen3 추론 모델을 배포하고, 내부 LLM의 API 요청·응답과 실행 설정을 점검했습니다. 기존 코드의 데이터 형식과 렌더링 경로를 비교하거나, 실행 로그를 설정 파일·공식 문서와 대조하면서 오류 원인을 찾았습니다.'
 };
