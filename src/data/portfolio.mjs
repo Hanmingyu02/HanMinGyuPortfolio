@@ -99,11 +99,11 @@ steps:[
 }
 ];
 export const education=[
+{title:'금오공과대학교',org:'컴퓨터공학 전공 · 학사',date:'2021.03 ~ 2027.02',status:'졸업 예정',summary:'컴퓨터공학 전공 · 팀 프로젝트와 기업 연계 개발 경험',details:[]},
 {title:'데이터 직무부트캠프',org:'코멘토 | 현직 데이터분석팀 리드와 함께하는 데이터 분석 실무',date:'2026.11.22 ~ 2026.12.20',status:'진행 예정',summary:'',details:[]},
 {title:'AX·DX 실전 설계 아카데미',org:'한국지능정보사회진흥원(NIA) · K-ICT 빅데이터센터',date:'2026.03 ~ 2026.04',status:'10시간',summary:'AI 도입을 위한 업무 정의 · 데이터 준비 · 결과 검증 관점 학습',details:['기초 온라인 과정에서 DX와 AX의 차이, AI 서비스 구성, 생성형 AI 신뢰성·운영 고려사항을 학습했습니다.','업무와 목표: 해결할 업무·성과 판단 기준 정의.','서비스 구성: 모델·데이터·화면·검증 절차·운영 기록의 필요성.','답변 신뢰성: 생성형 AI 오답 가능성과 외부 근거 보완 개념.','안전한 활용: 개인정보·접근권한·사람의 확인·안정성·비용. 학습 내용이며 실제 RAG 구축 성과를 의미하지 않습니다.']},
 {title:'생성형 AI 활용 챗봇개발 실무 교육과정',org:'국립금오공과대학교 · MyMeta',date:'2025.06.25 ~ 2025.07.03',status:'32시간 · 오프라인 28 / 온라인 4',summary:'LangChain·sLLM 기반 챗봇 개발과 팀 프로젝트 실습',details:['국립금오공과대학교에서 MyMeta 대표와 현직 개발자가 진행한 실무 교육.','기초 챗봇 구현(7시간): 생성형 AI 동향·활용 사례, NLP·LLM 개념과 LangChain 구조를 다루고, 개발 환경 구축과 간단한 챗봇 구현을 실습하는 과정.','LangChain 심화·sLLM 연동(7시간): 체인 구성, 프롬프트·메모리 관리, 맞춤형 챗봇 개발과 sLLM 환경 구축·LangChain 연동 실습.','고급 기능·팀 프로젝트(14시간): 프롬프트 엔지니어링, 미세조정, 대화 기록 관리와 최적화를 다루고, 팀 프로젝트 구현·발표·피드백으로 구성.','온라인 사전 준비(4시간): 오리엔테이션, 소프트웨어 설치·계정 생성, 개발 환경 준비 및 생성형 AI·LangChain·sLLM 개념 정리와 참고 영상 학습.']},
-{title:'WebKit 640 기업연계 SW 아카데미',org:'포항테크노파크 | 풀스택 개발자 양성',date:'2025.01 ~ 2025.05',status:'640시간',summary:'기업연계 풀스택 개발 · Catch Me 팀 프로젝트',details:['HTML5·JavaScript·React 웹 프런트엔드.','Java·Spring Boot REST API, MyBatis, SQL·MySQL·MariaDB.','React Native 모바일 개발 및 유라클 Morpheus 하이브리드 앱 연동.','요구사항·명세·WBS 기반 팀 프로젝트 진행.'],project:'catch-me'},
-{title:'금오공과대학교',org:'컴퓨터공학 전공 · 학사',date:'2021.03 ~ 2027.02',status:'졸업 예정',summary:'컴퓨터공학 전공 · 팀 프로젝트와 기업 연계 개발 경험',details:[]}
+{title:'WebKit 640 기업연계 SW 아카데미',org:'포항테크노파크 | 풀스택 개발자 양성',date:'2025.01 ~ 2025.05',status:'640시간',summary:'기업연계 풀스택 개발 · Catch Me 팀 프로젝트',details:['HTML5·JavaScript·React 웹 프런트엔드.','Java·Spring Boot REST API, MyBatis, SQL·MySQL·MariaDB.','React Native 모바일 개발 및 유라클 Morpheus 하이브리드 앱 연동.','요구사항·명세·WBS 기반 팀 프로젝트 진행.'],project:'catch-me'}
 ];
 export const certifications=[['정보처리기사','한국산업인력공단','2026.06.12'],['SQLD(SQL 개발자)','한국데이터산업진흥원','2025.09.19'],['한국사능력검정시험 1급','국사편찬위원회','2025.10.31']];
 export const awards=[
