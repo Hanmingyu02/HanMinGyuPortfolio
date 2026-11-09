@@ -345,3 +345,24 @@ dialog.architecture-dark img { background: #000; }
  .project-grid .project-card, .card-detail-hint { transition: none; }
  .project-grid .project-card:hover, .project-card:hover .card-detail-hint { transform: none; }
 }
+
+/* Tighter reading rhythm across cards and project details. */
+body { line-height: 1.65; }
+.hero-description { line-height: 1.75; }
+.project-card .project-info .meta { line-height: 1.55; margin-bottom: 18px; }
+.project-card .project-info .summary { line-height: 1.5; margin-bottom: 10px; }
+.project-card .card-overview { line-height: 1.65; margin-bottom: 16px; }
+.project-card .card-source { line-height: 1.6; margin-bottom: 15px; }
+.project-card .card-highlights li { line-height: 1.6; }
+.project-card .card-highlights li+li { margin-top: 5px; }
+.education-card p, .education-card .org { line-height: 1.6; margin-bottom: 6px; }
+.education-card li { line-height: 1.6; margin: 6px 0; }
+.education-card h3 { min-height: 0; line-height: 1.4; }
+.education-card .org { min-height: 0; }
+.education-card { gap: 16px; }
+.steps dt, .steps dd { line-height: 1.65; }
+.steps > div { padding-top: 15px; padding-bottom: 15px; }
+.details-body > .note { line-height: 1.65; margin-bottom: 16px; }
+.experience-card summary p { line-height: 1.6; }
+.case-study p { line-height: 1.75; margin-bottom: 14px; }
+.tech-decision dd { line-height: 1.7; }
