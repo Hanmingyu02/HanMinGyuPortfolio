@@ -233,3 +233,6 @@ dialog.architecture-dark .lightbox-status,
 dialog.architecture-dark .original { color: #fff; }
 dialog.architecture-dark img { background: #000; }
 @media(max-width:700px) { .architecture-dark .image-open { padding: 12px; } }
+
+/* A subtle outline separates app icons from the white card. */
+.project-icon::after { content: ''; position: absolute; inset: 0; border: 1px solid #d0d0d0; border-radius: inherit; pointer-events: none; z-index: 2; }
