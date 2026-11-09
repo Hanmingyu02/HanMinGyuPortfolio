@@ -404,3 +404,9 @@ body { line-height: 1.65; }
 .internship-duties li { font-size: 14px; line-height: 1.75; margin-bottom: 9px; }
 .internship-case-title { font-size: 17px; line-height: 1.6; margin: 28px 0 16px; }
 @media(max-width:700px) { .internship-profile > p { font-size: 14px; } .internship-case-title { font-size: 16px; } }
+
+/* Each internship disclosure owns its own open/close indicator. */
+.experience-card > summary > .expand { display: grid; place-items: center; width: 24px; height: 24px; flex-shrink: 0; transform: none; font-size: 23px; font-weight: 400; line-height: 1; }
+.experience-card > summary > .expand::before { content: '+'; }
+.experience-card[open] > summary > .expand { transform: none; }
+.experience-card[open] > summary > .expand::before { content: '×'; }
