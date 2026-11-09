@@ -335,3 +335,10 @@ dialog.architecture-dark img { background: #000; }
 }
 @media(max-width:700px) { .project-grid { grid-template-columns: 1fr; } }
 @media(prefers-reduced-motion:reduce) { .project-grid .project-card:hover { transform: none; } }
+
+/* Give wide project cards a little more vertical breathing room. */
+.project-info { min-height: 620px; padding: 30px; }
+.project-title { margin-bottom: 16px; }
+.project-info .meta { margin-bottom: 22px; }
+.card-highlights { margin-bottom: 24px; }
+@media(max-width:700px) { .project-info { min-height: 0; padding: 26px; } }
