@@ -615,3 +615,5 @@ header .nav-label { display: block; padding: 0 12px; font-size: 13px; font-weigh
 main { width: min(1160px, calc(100% - 452px)); margin-inline: auto; }
 @media(max-width:800px) { main { width: calc(100% - 40px); margin-inline: auto; } }
 html { scrollbar-gutter: stable both-edges; }
+
+.education-card .is-ongoing::before { background: #229954; }
