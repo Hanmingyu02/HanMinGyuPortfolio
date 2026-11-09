@@ -366,3 +366,31 @@ body { line-height: 1.65; }
 .experience-card summary p { line-height: 1.6; }
 .case-study p { line-height: 1.75; margin-bottom: 14px; }
 .tech-decision dd { line-height: 1.7; }
+
+/* Education overview: institution first, clear dates, details on demand. */
+.education-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; align-items: stretch; grid-auto-rows: 1fr; }
+.education-list .education-card { display: flex; flex-direction: column; gap: 0; height: 100%; min-height: 320px; padding: 28px; border: 1px solid #dedede; border-radius: 14px; background: #fff; }
+.education-card .education-header { display: block; flex: none; }
+.education-card .org { min-height: 0; margin: 0 0 10px; font-size: 13px; line-height: 1.55; color: #000; }
+.education-card h3 { min-height: 0; margin: 0; font-size: 23px; font-weight: 650; line-height: 1.4; letter-spacing: -.6px; }
+.education-card .education-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 8px; margin-top: 16px; }
+.education-date, .education-card .pill { display: inline-flex; align-items: center; padding: 5px 9px; font-size: 11px; line-height: 1.5; background: #f1f1f1; color: #000; border: 0; border-radius: 5px; }
+.education-card .is-ongoing { background: #fff; border: 1px solid #aaa; padding: 4px 9px; font-weight: 650; }
+.education-card .is-ongoing::before { content: ''; width: 5px; height: 5px; background: #000; border-radius: 50%; margin-right: 6px; }
+.education-card .education-summary { margin: 22px 0 24px; font-size: 15px; line-height: 1.65; font-weight: 600; color: #000; }
+.education-card .education-actions { display: flex; flex-direction: column; flex: none; margin-top: auto; }
+.education-card details { margin: 0; padding: 0; border: 0; }
+.education-card summary { display: flex; width: fit-content; align-items: center; gap: 12px; font-size: 13px; font-weight: 600; color: #000; cursor: pointer; list-style: none; }
+.education-card summary::-webkit-details-marker { display: none; }
+.education-card summary span { display: inline-block; font-size: 17px; line-height: 1; }
+.education-card details[open] summary span { transform: rotate(45deg); }
+.education-card details ul { padding: 16px 0 0 18px; margin: 16px 0 0; border-top: 1px solid #e5e5e5; }
+.education-card details li { font-size: 14px; line-height: 1.65; margin: 0 0 10px; color: #000; }
+.education-card .text-link { width: fit-content; margin: 14px 0 0; font-size: 13px; color: #000; text-decoration: underline; text-underline-offset: 4px; }
+.education-list:has(details[open]) { grid-auto-rows: auto; }
+@media(max-width:700px) {
+ .education-list { grid-template-columns: 1fr; gap: 16px; }
+ .education-list .education-card { min-height: 300px; padding: 24px; }
+ .education-card h3 { font-size: 21px; }
+ .education-card .education-meta { gap: 6px; }
+}
