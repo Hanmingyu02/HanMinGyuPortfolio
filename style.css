@@ -523,3 +523,32 @@ main > section > .section-heading > p:last-child:not(.eyebrow) { margin-left: au
  .internship-profile { padding: 23px; border-radius: 17px; }
 }
 @media(prefers-reduced-motion:reduce) { header nav a, .profile-work { transition: none; } }
+
+/* Only the opening profile area: one quiet surface, no nested cards. */
+.profile-intro { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: 28px 44px; margin-top: 22px; padding: 32px 34px 0; background: #fff; border: 1px solid #e1e1e1; border-radius: 18px; }
+.profile-intro .profile-identity { display: block; min-height: 0; padding: 0; background: transparent; border: 0; border-radius: 0; }
+.profile-intro .profile-label { font-size: 11px; font-weight: 400; letter-spacing: .4px; margin: 0 0 10px; }
+.profile-intro .profile-identity h1 { font-size: 44px; font-weight: 650; line-height: 1.2; letter-spacing: -2px; margin: 0 0 13px; }
+.profile-intro .profile-academic { font-size: 13px; line-height: 1.6; margin: 0; }
+.profile-intro .profile-fields { font-size: 12px; line-height: 1.6; margin: 13px 0 0; }
+.profile-intro .profile-fields span { margin: 0 5px; }
+.profile-intro .profile-work { display: block; justify-self: stretch; padding: 3px 0 3px 30px; border: 0; border-left: 1px solid #e5e5e5; border-radius: 0; background: transparent; }
+.profile-intro .profile-work:hover { background: transparent; }
+.profile-intro .profile-topline { font-size: 11px; line-height: 1.6; }
+.profile-intro .profile-topline > span:last-child { font-size: 17px; }
+.profile-intro .profile-company { font-size: 21px; font-weight: 600; line-height: 1.4; letter-spacing: -.6px; margin: 12px 0 5px; }
+.profile-intro .profile-team { font-size: 12px; line-height: 1.6; margin: 0 0 12px; }
+.profile-intro .profile-dates { font-size: 11px; margin: 0; }
+.profile-intro .profile-projects { grid-column: 1/-1; display: flex; align-items: center; gap: 25px; padding: 17px 0; border: 0; border-top: 1px solid #eaeaea; border-radius: 0; background: transparent; }
+.profile-intro .profile-work-label { flex-shrink: 0; font-size: 11px; font-weight: 400; margin: 0; }
+.profile-intro .profile-project-links { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.profile-intro .profile-project-row { display: flex; align-items: center; gap: 9px; padding: 0; border: 0; font-size: 12px; line-height: 1.6; font-weight: 600; }
+.profile-intro .profile-project-row:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media(max-width:700px) {
+ .profile-intro { grid-template-columns: 1fr; gap: 24px; padding: 25px 24px 0; margin-top: 12px; border-radius: 16px; }
+ .profile-intro .profile-identity h1 { font-size: 38px; }
+ .profile-intro .profile-work { padding: 21px 0 0; border: 0; border-top: 1px solid #eaeaea; }
+ .profile-intro .profile-projects { align-items: flex-start; gap: 12px; flex-direction: column; padding: 18px 0 22px; }
+ .profile-intro .profile-project-links { gap: 12px 19px; }
+ .profile-intro .profile-project-row { font-size: 11px; }
+}
