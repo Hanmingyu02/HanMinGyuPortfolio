@@ -648,3 +648,5 @@ main > section > .section-heading h2, #experience > .section-heading h2 { font-s
 
 main > section > .section-heading .eyebrow,
 #experience > .section-heading .eyebrow { font-size: 13px; color: #444444; }
+
+.key-validation > p { font-size: 14px; line-height: 1.7; margin: 14px 0; }
