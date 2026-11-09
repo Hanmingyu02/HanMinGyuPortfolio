@@ -344,13 +344,13 @@ dialog.architecture-dark img { background: #000; }
 @media(max-width:700px) { .project-info { min-height: 0; padding: 26px; } }
 
 /* Uniform education cards; expanded content grows without clipping. */
-.education-list { align-items: stretch; grid-auto-rows: minmax(330px, auto); }
+.education-list { align-items: stretch; grid-auto-rows: minmax(330px, 1fr); }
 .education-card { height: 100%; min-height: 330px; }
 .education-card > div:last-child { display: flex; flex-direction: column; flex: 1; }
 .education-card h3 { min-height: 60px; }
 .education-card .org { min-height: 44px; }
 .education-card details { margin-top: auto; }
 @media(max-width:700px) {
-  .education-list { grid-auto-rows: minmax(330px, auto); }
+  .education-list { grid-auto-rows: minmax(330px, 1fr); }
   .education-card h3 { min-height: 54px; }
 }
