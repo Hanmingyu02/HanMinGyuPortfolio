@@ -236,3 +236,9 @@ dialog.architecture-dark img { background: #000; }
 
 /* A subtle outline separates app icons from the white card. */
 .project-icon::after { content: ''; position: absolute; inset: 0; border: 1px solid #d0d0d0; border-radius: inherit; pointer-events: none; z-index: 2; }
+
+/* Give Catch Me's mark breathing room inside the outline. */
+.project-icon[data-project="catch-me"] { background: #fff; }
+.project-icon[data-project="catch-me"] .logo { width: 36px; height: 36px; border-radius: 7px; }
+.project-icon[data-project="catch-me"]::after { border-color: #dedede; }
+.detail-title .project-icon[data-project="catch-me"] .logo { width: 46px; height: 46px; border-radius: 9px; }
