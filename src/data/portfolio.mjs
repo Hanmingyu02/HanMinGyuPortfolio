@@ -108,17 +108,25 @@ steps:[
 {
 title:'Markdown 전처리 적용 여부에 따른 RAG 검색 성능 비교',
 summary:'문서 3개를 대상으로 Markdown 구조화 전처리 효과 비교',
-status:'진행 중',stackNote:'예정 구성',tags:['Python','ChromaDB','Embedding-0.6B','RAG','Structure-aware Chunking','Recursive Chunking'],
+status:'진행 중',stackNote:'예정 구성',tags:['Python','PostgreSQL','pgvector','Embedding-0.6B','RAG','Structure-aware Chunking','Recursive Chunking'],
 flowDescription:'문서 3개를 대상으로 Markdown 전처리 적용 여부에 따라 RAG 검색 정확도와 응답 품질이 어떻게 달라지는지 비교하는 실험을 설계·구현하고 있습니다.',
 duties:[
 '문서 전처리와 Markdown 구조화 작업을 담당합니다.',
 '검색에 사용할 벡터 DB 구축과 검색 성능 평가를 담당합니다.'
 ],
+storageSchema:[
+['collection_id','UUID','청크가 속한 컬렉션 식별자'],
+['embedding','VECTOR','청크를 임베딩한 숫자 벡터 · 1,024차원'],
+['document','VARCHAR','청크 원문 텍스트'],
+['cmetadata','JSON / JSONB','파일명·페이지·조항 등의 부가 정보'],
+['custom_id','VARCHAR','사용자가 지정한 청크 식별자'],
+['uuid','UUID','각 레코드를 구분하는 고유 ID · 기본 키(PK)']
+],
 caseTitle:'실험 설계 및 구현 현황',
 steps:[
 ['실험 대상','단순 HWP 문서 1개, 엑셀 파일 1개, 복잡한 표가 포함된 문서 1개를 대상으로 비교합니다.'],
 ['비교 항목','Markdown 구조화 전처리를 적용한 경우와 적용하지 않은 경우의 검색 정확도·응답 품질을 비교할 계획입니다.'],
-['기술 구성','Python과 ChromaDB 기반 RAG 구성을 계획하고 있습니다. 임베딩 모델은 Embedding-0.6B이며, 벡터는 1,024차원으로 구성합니다.'],
+['기술 구성','Python과 PostgreSQL + pgvector 기반으로 RAG 실험을 설계·구현하고 있습니다. 임베딩 모델은 Embedding-0.6B이며, 벡터는 1,024차원으로 구성합니다.'],
 ['청킹 방식 선택 이유','사내 문서는 제목·장·절·조항을 기준으로 내용이 이어져 있어, 일정한 길이로만 자르면 관련 내용과 문맥이 끊길 수 있다고 봤습니다. 그래서 문서 구조를 기준으로 나누는 Structure-aware Chunking을 선택했습니다. 다만 하나의 절이나 조항이 길면 청크도 지나치게 커질 수 있어, 긴 청크는 문단·문장 단위로 다시 나누는 Recursive Chunking을 함께 사용하도록 구성했습니다.'],
 ['진행 상태','현재 실험 설계 및 구현 단계입니다. 전처리의 검색 품질 개선 효과를 검증하는 것이 목표이며, 아직 평가 결과가 나온 단계는 아닙니다.']
 ]
