@@ -1,5 +1,5 @@
 export const site={title:'한민규 포트폴리오',favicon:'/icons/portfolio-pf-v2.png',url:'https://hanmingyu02.github.io/HanMinGyuPortfolio',base:'/HanMinGyuPortfolio',name:'한민규',email:null,github:null};
-export const menu=[['experience','현장실습'],['projects','프로젝트'],['education','교육사항'],['certifications','자격증'],['awards','수상내역']];
+export const menu=[['experience','현장실습'],['projects','프로젝트'],['education','교육사항'],['certifications','자격증·어학'],['awards','수상내역']];
 const root='https://wonderfulrosemari.github.io/img/projects/';
 export const projects=[
 {slug:'luno',title:'LUNO',cardSource:'한국인터넷진흥원 · 과학기술정보통신부 · 금융감독원',cardHighlights:['SBERT·한국어 BERT·Naive Bayes를 결합한 위험도 분석','음성 특성 보완 후 약 140건 내부 평가 정답 일치율 약 86% → 92% · 실서비스 정확도 아님','Google Play 배포'],cardTags:['Java','Spring Boot','JPA','Spring Security','JWT','MySQL','Redis','Python','FastAPI','SBERT','한국어 BERT','Naive Bayes','CLOVA STT','Nginx','Kotlin','Prometheus','Grafana','k6'],cardRole:'팀원 · AI 분석·기능 통합 · 후속 운영 개선',cardSummary:'보이스피싱 위험을 분석하는 모바일 보안 서비스',cardOverview:'통화 음성과 문자 URL을 분석하고 이력을 관리합니다. 후속 작업으로 Snapshot Cache와 모니터링을 구성하고, 로컬 부하테스트에서 발생한 타임아웃을 진단·재검증했습니다.',video:{src:'/media/luno/demo.mp4',original:'https://wonderfulrosemari.github.io/img/projects/luno/demo.mp4',title:'LUNO 시연 영상'},category:'모바일 보안 · AI',summary:'통화 음성의 언어·비언어 신호와 문자 URL을 결합해 보이스피싱 위험을 판별하는 모바일 보안 서비스',period:'2025.10–2026.01',role:'3인 팀 · 팀원',tags:['Spring Boot','FastAPI','Kotlin','MySQL','Snapshot Cache','k6'],logo:'logo.png',cover:'home-screen.png',metrics:[['약 86% → 92%','금융감독원 사례 약 140건 내부 라벨 일치율 · 실서비스 정확도 아님'],['480,007건 / 실패 0','로컬 1,000 RPS 목표 · H2 + 대체 로컬 AI + health 포함']],
@@ -140,6 +140,7 @@ export const education=[
 {title:'WebKit 640 기업연계 SW 아카데미',org:'포항테크노파크 | 풀스택 개발자 양성',date:'2025.01 ~ 2025.05',status:'640시간',summary:'기업연계 풀스택 개발 · Catch Me 팀 프로젝트',details:['HTML5·JavaScript·React 웹 프런트엔드.','Java·Spring Boot REST API, MyBatis, SQL·MySQL·MariaDB.','React Native 모바일 개발 및 유라클 Morpheus 하이브리드 앱 연동.','요구사항·명세·WBS 기반 팀 프로젝트 진행.'],project:'catch-me'}
 ];
 export const certifications=[['정보처리기사','한국산업인력공단','2026.06.12'],['SQLD(SQL 개발자)','한국데이터산업진흥원','2025.09.19'],['한국사능력검정시험 1급','국사편찬위원회','2025.10.31']];
+export const languages=[['TOEIC Speaking(토익스피킹)','IH','2026.08.09']];
 export const awards=[
 ['2026.02.04','DX·AX 기반 역량 강화 프로젝트 장려상','국립금오공과대학교 교수학습혁신센터','luno','awards/dx-ax-encouragement.png','보이스피싱 위험 분석 모바일 앱 팀 프로젝트'],
 ['2025.11.28','한국정보기술학회 우수논문상 동상','2025 추계종합학술대회 대학생 논문경진대회','catch-me','awards/kiit-2025-bronze.png','실종 반려동물 정보 연계와 이미지 분류 개선 논문'],

@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
-import {site,menu,projects,experiences,education,certifications,awards} from '../src/data/portfolio.mjs';
+import {site,menu,projects,experiences,education,certifications,languages,awards} from '../src/data/portfolio.mjs';
 const home=await readFile('dist/index.html','utf8');
-assert.equal(menu.length,5);assert.equal(experiences.length,3);assert.equal(projects.length,3);assert.equal(education.length,5);assert.equal(certifications.length,3);assert.equal(awards.length,5);
-assert.deepEqual(menu.map(x=>x[1]),['현장실습','프로젝트','교육사항','자격증','수상내역']);
+assert.equal(menu.length,5);assert.equal(experiences.length,3);assert.equal(projects.length,3);assert.equal(education.length,5);assert.equal(certifications.length,3);assert.deepEqual(languages,[['TOEIC Speaking(토익스피킹)','IH','2026.08.09']]);assert.equal(awards.length,5);
+assert.deepEqual(menu.map(x=>x[1]),['현장실습','프로젝트','교육사항','자격증·어학','수상내역']);
 for(const [id] of menu)assert(home.includes(`id="${id}"`));
 assert.equal((home.match(/class="award-card"/g)||[]).length,5);
 assert.equal(new Set(awards.map(a=>a[0]+a[3])).size,5);
