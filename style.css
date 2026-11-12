@@ -676,3 +676,8 @@ main > section > .section-heading .eyebrow,
 .storage-table code { font-size: 12px; white-space: nowrap; }
 .storage-table td:nth-child(2) { white-space: nowrap; }
 @media(max-width:700px) { .storage-table { min-width: 460px; } }
+
+.rag-evaluation > p { font-size: 14px; line-height: 1.75; margin: 14px 0; }
+.rag-evaluation .storage-table td { white-space: normal; }
+.rag-evaluation .storage-table th { min-width: 105px; }
+.rag-evaluation .rag-conclusion { padding: 16px 18px; border-left: 2px solid #777; background: #f6f6f6; }
